@@ -21,8 +21,10 @@ gulp.task('tsd', function (callback) {
 });
  
 gulp.task('scripts', ['tsd'], function () {
-	return gulp.src(['src/**/*.ts', 'typings/tsd.d.ts'])
-		.pipe(ts())
+	return gulp.src('src/**/*.ts')
+		.pipe(ts({
+			module: 'amd'
+		}))
 		.pipe(gulp.dest('build/scripts'));
 });
  

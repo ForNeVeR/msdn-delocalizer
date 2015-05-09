@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Memhub",
+  "name": "memhub",
   "description": "Extension to remember GitHub issues filter settings",
   "version": "0.1",
   "permissions": [
