@@ -1,6 +1,7 @@
 var del = require('del');
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
+var tsd = require('gulp-tsd');
 var zip = require('gulp-zip');
 
 gulp.task('clean', function (callback) {
@@ -11,9 +12,16 @@ gulp.task('copy', function () {
 	return gulp.src('src/manifest.json')
 		.pipe(gulp.dest('build'));
 });
+
+gulp.task('tsd', function (callback) {
+	tsd({
+        command: 'reinstall',
+        config: './tsd.json'
+    }, callback);
+});
  
-gulp.task('scripts', function () {
-	return gulp.src('src/**/*.ts')
+gulp.task('scripts', ['tsd'], function () {
+	return gulp.src(['src/**/*.ts', 'typings/tsd.d.ts'])
 		.pipe(ts())
 		.pipe(gulp.dest('build/scripts'));
 });
