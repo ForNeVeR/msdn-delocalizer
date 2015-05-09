@@ -1,4 +1,4 @@
-var regex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/.compile(); 
+var regex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/;
 
 interface GitHubParams {
 	user: string;

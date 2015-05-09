@@ -1,9 +1,9 @@
 /// <reference path="../typings/tsd.d.ts"/>
-import urlUtils = require('url-utils');
+import UrlUtils = require('url-utils');
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	if (changeInfo.status === 'loading') {
-		var query = urlUtils.githubParamsFromUrl(changeInfo.url);
+		var query = UrlUtils.githubParamsFromUrl(changeInfo.url);
 		if (query == null) {
 			return null;
 		}

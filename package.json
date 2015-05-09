@@ -4,7 +4,8 @@
   "description": "Chrome extension to remember GitHub issues filter settings",
   "main": "index.js",
   "scripts": {
-    "prepublish": "gulp"
+    "prepublish": "gulp",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,10 @@
   "devDependencies": {
     "del": "^1.1.1",
     "gulp": "^3.8.11",
+    "gulp-mocha": "^2.0.1",
     "gulp-tsd": "0.0.4",
-    "gulp-typescript": "~2.7.1",
-    "gulp-zip": "^3.0.2"
+    "gulp-typescript": "~2.6.0",
+    "gulp-zip": "^3.0.2",
+    "mocha": "^2.2.4"
   }
 }
