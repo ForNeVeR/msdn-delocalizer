@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Memhub",
+  "description": "Extension to remember GitHub issues filter settings",
+  "version": "0.1",
+  "permissions": [
+    "https://github.com/*",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  }
+}

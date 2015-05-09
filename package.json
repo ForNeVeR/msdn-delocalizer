@@ -1,0 +1,29 @@
+{
+  "name": "memhub",
+  "version": "0.1.0",
+  "description": "Chrome extension to remember GitHub issues filter settings",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForNeVeR/memhub"
+  },
+  "keywords": [
+    "github",
+    "issues"
+  ],
+  "author": "Friedrich von Never",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ForNeVeR/memhub/issues"
+  },
+  "homepage": "https://github.com/ForNeVeR/memhub",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-typescript": "~2.7.1",
+    "gulp-zip": "^3.0.2"
+  }
+}
