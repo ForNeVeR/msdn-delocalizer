@@ -1,8 +1,10 @@
 /// <reference path="typings/tsd.d.ts"/>
 
+import browserify = require('browserify');
 import del = require('del');
 import gulp = require('gulp');
 import mocha = require('gulp-mocha');
+import source = require('vinyl-source-stream');
 import ts = require('gulp-typescript');
 var zip = require('gulp-zip');
 
@@ -12,10 +14,10 @@ gulp.task('clean', (callback) => {
  
 gulp.task('copy', () => {
     return gulp.src('src/manifest.json')
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build/dest'));
 });
  
-gulp.task('scripts', () => {
+gulp.task('typescript', () => {
     return gulp.src('src/**/*.ts')
         .pipe(ts({
             module: 'commonjs'
@@ -23,21 +25,22 @@ gulp.task('scripts', () => {
         .pipe(gulp.dest('build/src'));
 });
 
+gulp.task('scripts', ['typescript'], () => {
+    return browserify({
+        entries: [ 'build/src/background.js' ]
+    }).bundle().pipe(source('background.js')).pipe(gulp.dest('build/dest/'));
+});
+
 gulp.task('zip', ['scripts', 'copy'], () => {
     var manifest = require('./src/manifest'),
-        distFileName = manifest.name + ' v' + manifest.version + '.zip',
-        mapFileName = manifest.name + ' v' + manifest.version + '-maps.zip';
+        distFileName = manifest.name + ' v' + manifest.version + '.zip';
 
-    gulp.src('build/src/**/*.map')
-        .pipe(zip(mapFileName))
-        .pipe(gulp.dest('dist'));
-
-    return gulp.src(['build/**', '!build/src/**/*.map'])
+    return gulp.src(['build/dest/**'])
         .pipe(zip(distFileName))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('test-compile', ['scripts'], () => {
+gulp.task('test-compile', ['typescript'], () => {
     return gulp.src('test/**/*.ts')
         .pipe(ts({
             module: 'commonjs'
@@ -50,4 +53,4 @@ gulp.task('test', ['test-compile'], () => {
         .pipe(mocha());
 });
  
-gulp.task('default', ['clean', 'zip']);
+gulp.task('default', ['zip']);

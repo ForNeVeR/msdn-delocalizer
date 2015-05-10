@@ -34,6 +34,12 @@
     },
     "gulp-typescript/gulp-typescript.d.ts": {
       "commit": "b3834d886a95789e6ab56e8244775ec10c5293d0"
+    },
+    "browserify/browserify.d.ts": {
+      "commit": "b3834d886a95789e6ab56e8244775ec10c5293d0"
+    },
+    "vinyl-source-stream/vinyl-source-stream.d.ts": {
+      "commit": "b3834d886a95789e6ab56e8244775ec10c5293d0"
     }
   }
 }
