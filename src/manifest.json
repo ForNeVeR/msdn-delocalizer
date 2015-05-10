@@ -10,8 +10,7 @@
   ],
   "background": {
     "scripts": [
-      "src/url-utils.js",
-      "src/background.js"
+      "background.js"
     ],
     "persistent": false
   }

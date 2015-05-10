@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ForNeVeR/memhub",
   "devDependencies": {
+    "browserify": "^10.1.3",
     "del": "^1.1.1",
     "gulp": "gulpjs/gulp",
     "gulp-mocha": "^2.0.1",
@@ -31,6 +32,7 @@
     "interpret": "^0.5.2",
     "mocha": "^2.2.4",
     "tsd": "^0.5.7",
-    "typescript-register": "ForNeVeR/typescript-register#js"
+    "typescript-register": "ForNeVeR/typescript-register#js",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
