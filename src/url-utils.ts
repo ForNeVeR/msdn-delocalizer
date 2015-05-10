@@ -1,7 +1,7 @@
 var issueRegex = /^https:\/\/github.com\/.*?\/.*?\/issues\/\d+$/;
 var filterRegex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/;
 
-interface GitHubParams {
+export interface GitHubParams {
 	user: string;
 	project: string;
 	params: string;
