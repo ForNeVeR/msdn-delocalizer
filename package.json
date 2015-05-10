@@ -4,7 +4,7 @@
   "description": "Chrome extension to remember GitHub issues filter settings",
   "main": "index.js",
   "scripts": {
-    "prepublish": "gulp",
+    "prepublish": "tsd reinstall -s && gulp",
     "test": "gulp test"
   },
   "repository": {
@@ -23,11 +23,14 @@
   "homepage": "https://github.com/ForNeVeR/memhub",
   "devDependencies": {
     "del": "^1.1.1",
-    "gulp": "^3.8.11",
+    "gulp": "gulpjs/gulp",
     "gulp-mocha": "^2.0.1",
     "gulp-tsd": "0.0.4",
     "gulp-typescript": "~2.6.0",
     "gulp-zip": "^3.0.2",
-    "mocha": "^2.2.4"
+    "interpret": "^0.5.2",
+    "mocha": "^2.2.4",
+    "tsd": "^0.5.7",
+    "typescript-register": "ForNeVeR/typescript-register#js"
   }
 }
