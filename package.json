@@ -4,7 +4,7 @@
   "description": "Chrome extension to remember GitHub issues filter settings",
   "main": "index.js",
   "scripts": {
-    "prepublish": "gulp",
+    "prepublish": "tsd reinstall && gulp",
     "test": "gulp test"
   },
   "repository": {

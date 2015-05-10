@@ -4,7 +4,6 @@ import del = require('del');
 import gulp = require('gulp');
 import mocha = require('gulp-mocha');
 import ts = require('gulp-typescript');
-import tsd = require('gulp-tsd');
 var zip = require('gulp-zip');
 
 gulp.task('clean', (callback) => {
@@ -15,15 +14,8 @@ gulp.task('copy', () => {
     return gulp.src('src/manifest.json')
         .pipe(gulp.dest('build'));
 });
-
-gulp.task('tsd', (callback) => {
-    tsd({
-        command: 'reinstall',
-        config: './tsd.json'
-    }, callback);
-});
  
-gulp.task('scripts', ['tsd'], () => {
+gulp.task('scripts', () => {
     return gulp.src('src/**/*.ts')
         .pipe(ts({
             module: 'commonjs'
