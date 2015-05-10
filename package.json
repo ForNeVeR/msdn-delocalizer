@@ -23,13 +23,13 @@
   "homepage": "https://github.com/ForNeVeR/memhub",
   "devDependencies": {
     "del": "^1.1.1",
-    "gulp": "^3.8.11",
+    "gulp": "gulpjs/gulp",
     "gulp-mocha": "^2.0.1",
     "gulp-tsd": "0.0.4",
     "gulp-typescript": "~2.6.0",
     "gulp-zip": "^3.0.2",
     "interpret": "^0.5.2",
     "mocha": "^2.2.4",
-    "typescript-require": "pspeter3/typescript-require"
+    "typescript-register": "ForNeVeR/typescript-register#js"
   }
 }
