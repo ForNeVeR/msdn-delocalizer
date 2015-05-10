@@ -26,5 +26,10 @@ describe('UrlUtils', () => {
 				params: '?q=xxx' 
 			});
 		});
+		
+		it('should return null for single issue link', () => {
+			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues/30');
+			assert.deepEqual(query, null);
+		});
 	});
 });

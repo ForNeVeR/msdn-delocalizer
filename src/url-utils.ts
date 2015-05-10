@@ -1,4 +1,5 @@
-var regex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/;
+var issueRegex = /^https:\/\/github.com\/.*?\/.*?\/issues\/\d+$/;
+var filterRegex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/;
 
 interface GitHubParams {
 	user: string;
@@ -7,7 +8,11 @@ interface GitHubParams {
 }
 
 export function githubParamsFromUrl(url: string): GitHubParams {
-	var query = regex.exec(url);
+	if (issueRegex.test(url)) {
+		return null;
+	}
+	
+	var query = filterRegex.exec(url);
 	if (query == null) {
 		return null;
 	}
