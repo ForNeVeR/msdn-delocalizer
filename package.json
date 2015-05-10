@@ -28,6 +28,8 @@
     "gulp-tsd": "0.0.4",
     "gulp-typescript": "~2.6.0",
     "gulp-zip": "^3.0.2",
-    "mocha": "^2.2.4"
+    "interpret": "^0.5.2",
+    "mocha": "^2.2.4",
+    "typescript-require": "pspeter3/typescript-require"
   }
 }
