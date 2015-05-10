@@ -1,4 +1,4 @@
-var issueRegex = /^https:\/\/github.com\/.*?\/.*?\/issues\/\d+$/;
+var issueRegex = /^https:\/\/github.com\/.*?\/.*?\/issues\/(\d+|new)$/;
 var filterRegex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/;
 
 export interface GitHubParams {

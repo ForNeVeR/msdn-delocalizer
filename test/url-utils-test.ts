@@ -31,5 +31,10 @@ describe('UrlUtils', () => {
 			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues/30');
 			assert.deepEqual(query, null);
 		});
+		
+		it('should skip /new url', () => {
+			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues/new');
+			assert.deepEqual(query, null);
+		});
 	});
 });
