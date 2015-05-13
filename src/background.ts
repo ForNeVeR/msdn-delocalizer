@@ -1,26 +1,24 @@
 /// <reference path="../typings/tsd.d.ts"/>
+/// <reference path="data.d.ts"/>
+
+import Storage = require('./storage');
 import UrlUtils = require('./url-utils');
 
-var cache: { [key: string]: UrlUtils.GitHubParams } = {};
-
-function getKey(query: UrlUtils.GitHubParams): string {
-	return query.user + '/' + query.project;
+function loadUrl(query: GitHubParams): Promise<string> {
+	var key = Storage.key(query);
+	return Storage.getParams(key).then((params) => {
+		if (params == null) {
+			return null;
+		}	
+		
+		var url = 'https://github.com/' + params.user + '/' + params.project + '/issues' + params.params;
+		return url;
+	});
 }
 
-function loadUrl(query: UrlUtils.GitHubParams): string {
-	var key = getKey(query);
-	var entry = cache[key];
-	if (entry === undefined) {
-		return null;
-	}
-	
-	var url = 'https://github.com/' + entry.user + '/' + entry.project + '/issues' + entry.params;
-	return url;
-}
-
-function saveQuery(query: UrlUtils.GitHubParams): void {
-	var key = getKey(query);
-	cache[key] = query;
+function saveQuery(query: GitHubParams): void {
+	var key = Storage.key(query);
+	Storage.setParams(key, query);
 }
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
@@ -30,13 +28,13 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	}
 	
 	if (query.params === '') {
-		var url = loadUrl(query);
-		if (url != null) {
-			console.log('Resetting to', url);
-			chrome.tabs.update(tabId, {
-				url: url
-			});
-		}
+		loadUrl(query).then((url) => {
+			if (url != null) {
+				chrome.tabs.update(tabId, {
+					url: url
+				});
+			}
+		});
 	} else {
 		saveQuery(query);
 	}

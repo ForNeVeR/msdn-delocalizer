@@ -1,11 +1,7 @@
+/// <reference path="data.d.ts"/>
+
 var issueRegex = /^https:\/\/github.com\/.*?\/.*?\/issues\/(\d+|new)$/;
 var filterRegex = /^https:\/\/github.com\/(.*?)\/(.*?)\/issues(.*)$/;
-
-export interface GitHubParams {
-	user: string;
-	project: string;
-	params: string;
-}
 
 export function githubParamsFromUrl(url: string): GitHubParams {
 	if (issueRegex.test(url)) {

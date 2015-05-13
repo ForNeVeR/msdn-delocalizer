@@ -40,6 +40,9 @@
     },
     "vinyl-source-stream/vinyl-source-stream.d.ts": {
       "commit": "b3834d886a95789e6ab56e8244775ec10c5293d0"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
     }
   }
 }
