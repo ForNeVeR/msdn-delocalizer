@@ -11,3 +11,11 @@ To compile Chrome plugin in the `dist` directory, use
 To perform some tests, use
 
     npm test
+
+Install
+-------
+Currently only developer mode installation is supported. To install memhub to your Chrome, first
+build it. After that you chould install the extension from the `build/dest` directory using
+[developer mode][chrome-dev-mode].
+
+[chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
