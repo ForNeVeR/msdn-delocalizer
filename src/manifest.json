@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "memhub",
-  "description": "Extension to remember GitHub issues filter settings",
-  "version": "0.1",
+  "name": "msdn-delocalizer",
+  "description": "Chrome extension to force de-localization of Microsoft documentation pages",
+  "version": "0.0.1",
   "permissions": [
     "https://github.com/*",
     "storage",

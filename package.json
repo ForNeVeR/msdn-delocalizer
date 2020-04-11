@@ -1,7 +1,7 @@
 {
-  "name": "memhub",
-  "version": "0.1.0",
-  "description": "Chrome extension to remember GitHub issues filter settings",
+  "name": "msdn-delocalizer",
+  "version": "0.0.1",
+  "description": "Chrome extension to force de-localization of Microsoft documentation pages",
   "main": "index.js",
   "scripts": {
     "prepublish": "tsd reinstall --save --overwrite && gulp",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ForNeVeR/memhub"
+    "url": "https://github.com/ForNeVeR/msdn-delocalizer"
   },
   "keywords": [
     "github",
@@ -18,9 +18,9 @@
   "author": "Friedrich von Never",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ForNeVeR/memhub/issues"
+    "url": "https://github.com/ForNeVeR/msdn-delocalizer/issues"
   },
-  "homepage": "https://github.com/ForNeVeR/memhub",
+  "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
   "devDependencies": {
     "browserify": "^10.1.3",
     "del": "^1.1.1",
