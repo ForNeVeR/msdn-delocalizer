@@ -31,7 +31,6 @@
     "browserify": "^10.2.6",
     "copyfiles": "^2.2.0",
     "mocha": "^2.2.4",
-    "parcel": "^1.12.4",
     "typescript": "^3.8.3"
   }
 }

@@ -9,19 +9,23 @@ pages.
 msdn-delocalizer is a Chrome extension that will automatically delocalize
 Microsoft documentation pages, such as MSDN or docs.microsoft.com.
 
+Prerequisites
+-------------
+Install [yarn][] 1.22 or newer.
+
 Build
 -----
 To compile Chrome plugin into the `build/dest` directory, use
 
 ```console
-$ npm ci --skip-scripts
-$ npm run build
+$ yarn install
+$ yarn run build
 ```
 
 To perform the tests, use
 
 ```console
-$ npm test
+$ yarn test
 ```
 
 Install
@@ -32,3 +36,4 @@ the extension from the `build/dest` directory using the
 [developer mode][chrome-dev-mode].
 
 [chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
+[yarn]: https://classic.yarnpkg.com/

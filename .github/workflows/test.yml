@@ -15,24 +15,24 @@ jobs:
     runs-on: ${{ matrix.image }}
     steps:
       - uses: actions/checkout@v2
-      - id: npm-cache
-        name: Determine NPM cache directory
+      - id: yarn-cache
+        name: Determine Yarn cache directory
         run: |
-          echo "::set-output name=path::$(npm config get cache)"
-      - name: NPM cache
+          echo "::set-output name=path::$(yarn cache dir)"
+      - name: Yarn cache
         uses: actions/cache@v1.1.0
         with:
-          path: ${{ steps.npm-cache.outputs.path }}
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache.outputs.path }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: |
-          npm ci --ignore-scripts
+          yarn install
       - name: Build
         run: |
-          npm run build
+          yarn run build
       - name: Run tests
         run: |
-          npm test
+          yarn test
       - name: Upload the distribution
         if: matrix.image == 'ubuntu-18.04'
         uses: actions/upload-artifact@v1.0.0
