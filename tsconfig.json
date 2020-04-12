@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "lib": ["dom", "es2015", "es2015.symbol", "es2015.symbol.wellknown"]
+  }
+}

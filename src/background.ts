@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts"/>
+///<reference path="../node_modules/@types/chrome/index.d.ts"/>
 
 import UrlUtils = require("./url-utils");
 

@@ -1,5 +1,3 @@
-/// <reference path="typings/tsd.d.ts"/>
-
 import browserify = require('browserify');
 import del = require('del');
 import gulp = require('gulp');
@@ -11,17 +9,16 @@ var zip = require('gulp-zip');
 gulp.task('clean', (callback) => {
     del(['build/**'], callback);
 });
- 
+
 gulp.task('copy', () => {
     return gulp.src('src/manifest.json')
         .pipe(gulp.dest('build/dest'));
 });
- 
+
 gulp.task('typescript', () => {
+    const tsProject = ts.createProject('tsconfig.json');
     return gulp.src('src/**/*.ts')
-        .pipe(ts({
-            module: 'commonjs'
-        }))
+        .pipe(tsProject())
         .pipe(gulp.dest('build/src'));
 });
 
@@ -52,5 +49,5 @@ gulp.task('test', ['test-compile'], () => {
     return gulp.src('build/test/**/*.js')
         .pipe(mocha());
 });
- 
+
 gulp.task('default', ['zip']);
