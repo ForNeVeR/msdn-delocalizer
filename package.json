@@ -4,7 +4,7 @@
   "description": "Chrome extension to force de-localization of Microsoft documentation pages",
   "main": "index.js",
   "scripts": {
-    "prepublish": "tsd reinstall --save --overwrite && gulp",
+    "build": "tsd reinstall --save --overwrite && gulp",
     "test": "gulp test"
   },
   "repository": {

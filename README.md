@@ -14,7 +14,8 @@ Build
 To compile Chrome plugin in the `dist` directory, use
 
 ```console
-$ npm install
+$ npm ci --skip-scripts
+$ npm build
 ```
 
 To perform the tests, use
