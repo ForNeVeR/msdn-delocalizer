@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts"/>
+/// <reference path="../node_modules/@types/mocha/index.d.ts"/>
 /// <reference path="../src/typings-shim.d.ts"/>
 
 import assert = require('assert');

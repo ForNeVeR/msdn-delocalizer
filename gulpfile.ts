@@ -1,10 +1,11 @@
 import browserify = require('browserify');
 import del = require('del');
 import gulp = require('gulp');
-import mocha = require('gulp-mocha');
 import source = require('vinyl-source-stream');
 import ts = require('gulp-typescript');
 var zip = require('gulp-zip');
+
+const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('clean', (callback) => {
     del(['build/**'], callback);
@@ -15,14 +16,19 @@ gulp.task('copy', () => {
         .pipe(gulp.dest('build/dest'));
 });
 
-gulp.task('typescript', () => {
-    const tsProject = ts.createProject('tsconfig.json');
+gulp.task('compile', () => {
     return gulp.src('src/**/*.ts')
         .pipe(tsProject())
         .pipe(gulp.dest('build/src'));
 });
 
-gulp.task('scripts', ['typescript'], () => {
+gulp.task('test-compile', ['compile'], () => {
+    return gulp.src('test/**/*.ts')
+        .pipe(tsProject())
+        .pipe(gulp.dest('build/test'));
+});
+
+gulp.task('scripts', ['compile', 'test-compile'], () => {
     return browserify({
         entries: [ 'build/src/background.js' ]
     }).bundle().pipe(source('background.js')).pipe(gulp.dest('build/dest/'));
@@ -35,19 +41,6 @@ gulp.task('zip', ['scripts', 'copy'], () => {
     return gulp.src(['build/dest/**'])
         .pipe(zip(distFileName))
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('test-compile', ['typescript'], () => {
-    return gulp.src('test/**/*.ts')
-        .pipe(ts({
-            module: 'commonjs'
-        }))
-        .pipe(gulp.dest('build/test'));
-});
-
-gulp.task('test', ['test-compile'], () => {
-    return gulp.src('build/test/**/*.js')
-        .pipe(mocha());
 });
 
 gulp.task('default', ['zip']);
