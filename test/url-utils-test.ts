@@ -1,41 +1,36 @@
 /// <reference path="../typings/tsd.d.ts"/>
+/// <reference path="../src/typings-shim.d.ts"/>
 
 import assert = require('assert');
 import UrlUtils = require('../src/url-utils');
 
 describe('UrlUtils', () => {
-	describe('githubParamsFromUrl', () => {
-		it('should return empty parameters from issues URL', () => {
-			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues');
-			assert.deepEqual(query, {
-				user: 'ForNeVeR',
-				project: 'memhub',
-				params: '' 
-			});
+	describe('isMicrosoftDocumentationUrl', () => {
+		it('should return true for docs.microsoft.com and msdn.microsoft.com', () => {
+			assert.equal(UrlUtils.isMicrosoftDocumentationUrl(new URL('https://docs.microsoft.com/abcd')), true);
+			assert.equal(UrlUtils.isMicrosoftDocumentationUrl(new URL('https://msdn.microsoft.com/abcd')), true);
 		});
-		
-		it('should return null for improper URL', () => {
-			var query = UrlUtils.githubParamsFromUrl('https://github.com/help');
-			assert.deepEqual(query, null);
+
+		it('should return false for other sites', () => {
+			assert.equal(UrlUtils.isMicrosoftDocumentationUrl(new URL('https://example.microsoft.com/')), false);
 		});
-		
-		it('should return params for URL with parameters', () => {
-			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues?q=xxx');
-			assert.deepEqual(query, {
-				user: 'ForNeVeR',
-				project: 'memhub',
-				params: '?q=xxx' 
-			});
+	});
+
+	describe('delocalizeUrl', () => {
+		it('should return null for non-Microsoft documentation URL', () => {
+			assert.equal(UrlUtils.delocalizeUrl(new URL('http://example.com')) , null);
 		});
-		
-		it('should return null for single issue link', () => {
-			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues/30');
-			assert.deepEqual(query, null);
+
+		it('should return the same URL for non-localized input', () => {
+			var input = new URL('http://msdn.microsoft.com/no-localization');
+			assert.equal(UrlUtils.delocalizeUrl(input).toString(), input.toString());
 		});
-		
-		it('should skip /new url', () => {
-			var query = UrlUtils.githubParamsFromUrl('https://github.com/ForNeVeR/memhub/issues/new');
-			assert.deepEqual(query, null);
+
+		it('should return the English URL for localized input', () => {
+			var input = new URL('https://msdn.microsoft.com/ru-ru/library/t0zfk0w1.aspx');
+			assert.equal(
+				UrlUtils.delocalizeUrl(input).toString(),
+				'https://msdn.microsoft.com/en-us/library/t0zfk0w1.aspx');
 		});
 	});
 });

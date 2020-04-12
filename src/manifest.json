@@ -4,8 +4,8 @@
   "description": "Chrome extension to force de-localization of Microsoft documentation pages",
   "version": "0.0.1",
   "permissions": [
-    "https://github.com/*",
-    "storage",
+    "https://docs.microsoft.com/*",
+    "https://msdn.microsoft.com/*",
     "tabs"
   ],
   "background": {
