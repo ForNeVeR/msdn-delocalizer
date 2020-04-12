@@ -37,5 +37,5 @@ jobs:
         if: matrix.image == 'ubuntu-18.04'
         uses: actions/upload-artifact@v1.0.0
         with:
-          name: distribution
-          path: dist/msdn-delocalizer v0.0.1.zip
+          name: msdn-delocalizer
+          path: build/dest

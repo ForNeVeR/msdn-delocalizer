@@ -11,7 +11,7 @@ Microsoft documentation pages, such as MSDN or docs.microsoft.com.
 
 Build
 -----
-To compile Chrome plugin in the `dist` directory, use
+To compile Chrome plugin into the `build/dest` directory, use
 
 ```console
 $ npm ci --skip-scripts

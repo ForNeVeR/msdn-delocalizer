@@ -4,7 +4,10 @@
   "description": "Chrome extension to force de-localization of Microsoft documentation pages",
   "main": "index.js",
   "scripts": {
-    "build": "gulp",
+    "typescript": "tsc",
+    "manifest": "copyfiles --flat src/manifest.json build/dest",
+    "browserify": "browserify build/src/background.js --outfile build/dest/background.js",
+    "build": "npm run typescript && npm run manifest && npm run browserify",
     "test": "mocha build/test"
   },
   "repository": {
@@ -23,21 +26,12 @@
   },
   "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
   "devDependencies": {
-    "@types/browserify": "^12.0.36",
     "@types/chrome": "0.0.91",
     "@types/mocha": "^7.0.2",
-    "@types/node": "^12.12.6",
-    "browserify": "^10.1.3",
-    "del": "^4.1.1",
-    "graceful-fs": "4.2.2",
-    "gulp": "^3.9.0",
-    "gulp-tsd": "0.0.4",
-    "gulp-typescript": "^5.0.1",
-    "gulp-zip": "^3.0.2",
-    "interpret": "^0.5.2",
+    "browserify": "^10.2.6",
+    "copyfiles": "^2.2.0",
     "mocha": "^2.2.4",
-    "ts-node": "^8.8.2",
-    "typescript": "^2.7.2",
-    "vinyl-source-stream": "^1.1.0"
+    "parcel": "^1.12.4",
+    "typescript": "^3.8.3"
   }
 }
