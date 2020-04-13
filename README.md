@@ -37,10 +37,11 @@ $ yarn run build
 $ yarn test
 ```
 
-### Install
+### Install (developer mode)
 
 To install msdn-delocalizer to your Chrome in the [developer
-mode][chrome-dev-mode], point your Chrome to the `build/dest` directory.
+mode][chrome-dev-mode], load the `build/dest` directory as the unpacked
+extension source, and refresh it after every rebuild.
 
 [badge-chrome-web-store]: https://img.shields.io/chrome-web-store/v/oakieneemalliefelmegebjjagnjgpbm
 [chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
