@@ -11,12 +11,19 @@ Microsoft documentation pages, such as MSDN or docs.microsoft.com.
 
 ![Screenshot required by Chrome Web Store][screenshot]
 
-Prerequisites
--------------
+Install
+-------
+
+Install the extension from the [Chrome Web Store][chrome-web-store].
+
+Development
+-----------
+### Prerequisites
+
 Install [yarn][] 1.22 or newer.
 
-Build
------
+### Build
+
 To compile Chrome plugin into the `build/dest` directory, use
 
 ```console
@@ -24,18 +31,16 @@ $ yarn install
 $ yarn run build
 ```
 
-To perform the tests, use
+### Test
 
 ```console
 $ yarn test
 ```
 
-Install
--------
-Currently only developer mode installation is supported. To install
-msdn-delocalizer to your Chrome, first build it. After that you could install
-the extension from the `build/dest` directory using the
-[developer mode][chrome-dev-mode].
+### Install
+
+To install msdn-delocalizer to your Chrome in the [developer
+mode][chrome-dev-mode], point your Chrome to the `build/dest` directory.
 
 [badge-chrome-web-store]: https://img.shields.io/chrome-web-store/v/oakieneemalliefelmegebjjagnjgpbm
 [chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
