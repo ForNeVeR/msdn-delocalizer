@@ -1,4 +1,4 @@
-msdn-delocalizer
+msdn-delocalizer [![Chrome Web Store][badge-chrome-web-store]][chrome-web-store]
 ================
 Sometimes, when looking for Microsoft documentation via a search engine, you
 may be presented with a link leading to a localized documentation page from
@@ -8,6 +8,8 @@ pages.
 
 msdn-delocalizer is a Chrome extension that will automatically delocalize
 Microsoft documentation pages, such as MSDN or docs.microsoft.com.
+
+![Screenshot required by Chrome Web Store][screenshot]
 
 Prerequisites
 -------------
@@ -35,5 +37,8 @@ msdn-delocalizer to your Chrome, first build it. After that you could install
 the extension from the `build/dest` directory using the
 [developer mode][chrome-dev-mode].
 
+[badge-chrome-web-store]: https://img.shields.io/chrome-web-store/v/oakieneemalliefelmegebjjagnjgpbm
 [chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
+[chrome-web-store]: https://chrome.google.com/webstore/detail/msdn-delocalizer/oakieneemalliefelmegebjjagnjgpbm
+[screenshot]: docs/screenshot.png
 [yarn]: https://classic.yarnpkg.com/
