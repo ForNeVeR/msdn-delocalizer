@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
   "devDependencies": {
+    "@types/assert": "^1.5.5",
     "@types/chrome": "0.0.91",
     "@types/mocha": "^7.0.2",
     "browserify": "^10.2.6",

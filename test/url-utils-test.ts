@@ -18,18 +18,18 @@ describe('UrlUtils', () => {
 
 	describe('delocalizeUrl', () => {
 		it('should return null for non-Microsoft documentation URL', () => {
-			assert.equal(UrlUtils.delocalizeUrl(new URL('http://example.com')) , null);
+			assert.equal(UrlUtils.delocalizeUrl(new URL('http://example.com')), null);
 		});
 
 		it('should return the same URL for non-localized input', () => {
 			var input = new URL('http://msdn.microsoft.com/no-localization');
-			assert.equal(UrlUtils.delocalizeUrl(input).toString(), input.toString());
+			assert.equal(UrlUtils.delocalizeUrl(input)?.toString(), input.toString());
 		});
 
 		it('should return the English URL for localized input', () => {
 			var input = new URL('https://msdn.microsoft.com/ru-ru/library/t0zfk0w1.aspx');
 			assert.equal(
-				UrlUtils.delocalizeUrl(input).toString(),
+				UrlUtils.delocalizeUrl(input)?.toString(),
 				'https://msdn.microsoft.com/en-us/library/t0zfk0w1.aspx');
 		});
 	});

@@ -5,7 +5,7 @@ export function isMicrosoftDocumentationUrl(url: URL): boolean {
 
 var pathNameLanguageRegex = /^\/([a-zA-Z]{2}-[a-zA-Z]{2})\//;
 var englishPathName = '/en-us/';
-export function delocalizeUrl(url: URL): URL {
+export function delocalizeUrl(url: URL): URL | null {
 	if (!isMicrosoftDocumentationUrl(url)) return null;
 	var pathName = url.pathname;
 	var newPathName = pathName.replace(pathNameLanguageRegex, englishPathName);
