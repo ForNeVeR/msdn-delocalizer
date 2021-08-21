@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "msdn-delocalizer",
-  "description": "Chrome extension to force de-localization of Microsoft documentation pages",
-  "version": "0.0.1",
+  "description": "Browser extension to force de-localization of Microsoft documentation pages",
+  "version": "0.0.2",
   "permissions": [
     "https://docs.microsoft.com/*",
     "https://msdn.microsoft.com/*",
