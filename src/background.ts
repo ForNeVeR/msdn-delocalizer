@@ -4,9 +4,9 @@ import UrlUtils = require("./url-utils");
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 	if (changeInfo.url == null) return;
-	var tabUrl = new URL(changeInfo.url);
-	var replacementUrl = UrlUtils.delocalizeUrl(tabUrl);
-	if (replacementUrl == null) return;
+	const tabUrl = new URL(changeInfo.url);
+	const replacementUrl = UrlUtils.delocalizeUrl(tabUrl);
+	if (replacementUrl == null || replacementUrl.toString() == tabUrl.toString()) return;
 	chrome.tabs.update(tabId, {
 		url: replacementUrl.toString()
 	});
