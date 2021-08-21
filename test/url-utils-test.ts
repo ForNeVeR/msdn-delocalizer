@@ -1,5 +1,4 @@
 /// <reference path="../node_modules/@types/mocha/index.d.ts"/>
-/// <reference path="../src/typings-shim.d.ts"/>
 
 import assert = require('assert');
 import UrlUtils = require('../src/url-utils');
