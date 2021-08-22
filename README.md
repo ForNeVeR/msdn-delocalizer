@@ -6,8 +6,7 @@ Microsoft. Quality of translation varies a lot, but, as English speaker, you
 may choose to not deal with localization at all, and always look for English
 pages.
 
-msdn-delocalizer is a browser extension that will automatically delocalize
-Microsoft documentation pages, such as MSDN or docs.microsoft.com.
+msdn-delocalizer is a browser (Chrome, Firefox) extension that will automatically delocalize Microsoft documentation pages, such as MSDN or docs.microsoft.com.
 
 ![Screenshot required by Chrome Web Store][screenshot]
 
@@ -24,7 +23,7 @@ Install [yarn][] 1.22 or newer.
 
 ### Build
 
-To compile plugin into the `build/dest` directory, use
+To compile the plugin into the `build/dest` directory, use
 
 ```console
 $ yarn install
