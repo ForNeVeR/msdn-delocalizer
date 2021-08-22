@@ -45,10 +45,20 @@ $ yarn test
   - click the **Debug Add-ons** action from the page gear menu
   - **Load Temporary Add-on**, navigate to the `build/web-ext/msdn-delocalizer-<VERSION>.zip` file
 
+Documentation
+-------------
+
+- [Changelog][changelog]
+- [Maintainership][maintainership]
+- [License (MIT)][license]
+
 [badge-chrome-web-store]: https://img.shields.io/chrome-web-store/v/oakieneemalliefelmegebjjagnjgpbm
 [badge-firefox-add-ons]: https://img.shields.io/amo/v/msdn-delocalizer
+[changelog]: ./CHANGELOG.md
 [chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
 [chrome-web-store]: https://chrome.google.com/webstore/detail/msdn-delocalizer/oakieneemalliefelmegebjjagnjgpbm
 [firefox-add-ons]: https://addons.mozilla.org/en-US/firefox/addon/msdn-delocalizer/
+[license]: ./LICENSE.md
+[maintainership]: ./MAINTAINERSHIP.md
 [screenshot]: docs/screenshot.png
 [yarn]: https://classic.yarnpkg.com/
