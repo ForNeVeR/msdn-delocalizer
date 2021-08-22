@@ -15,6 +15,7 @@ Releasing a New Version
 9. Get the packed extension from GitHub and attach it to the GitHub release.
 10. Get the packed extension from GitHub and upload it to the [Chrome Web Store Developer portal][chrome-web-store-developer].
 11. Get the packed extension from GitHub and upload it to the [Add-ons for Firefox portal][add-ons-for-firefox].
+12. Download the tagged code snapshot from GitHub and upload it to the Add-ons for Firefox portal, when required.
 
 [add-ons-for-firefox]: https://addons.mozilla.org/en-US/developers/addon/msdn-delocalizer/edit
 [changelog]: ./CHANGELOG.md
