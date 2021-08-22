@@ -4,11 +4,14 @@
   "description": "Browser extension to force de-localization of Microsoft documentation pages",
   "main": "index.js",
   "scripts": {
-    "typescript": "tsc",
     "manifest": "copyfiles --flat src/manifest.json LICENSE.md build/dest",
+    "license": "copyfiles --flat LICENSE.md build/dest",
+    "icon": "magick convert src/icon.svg build/dest/icon.png",
+    "resources": "npm run manifest && npm run license && npm run icon",
+    "typescript": "tsc",
     "browserify": "browserify build/src/background.js --outfile build/dest/background.js",
     "package": "web-ext build -s build/dest -a build/web-ext",
-    "build": "npm run typescript && npm run manifest && npm run browserify && npm run package",
+    "build": "npm run resources && npm run typescript && npm run browserify && npm run package",
     "test": "mocha build/test"
   },
   "repository": {

@@ -13,5 +13,8 @@
       "background.js"
     ],
     "persistent": false
+  },
+  "icons": {
+    "128": "icon.png"
   }
 }
