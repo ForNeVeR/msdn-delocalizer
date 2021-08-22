@@ -7,7 +7,7 @@
     "manifest": "copyfiles --flat src/manifest.json LICENSE.md build/dest",
     "license": "copyfiles --flat LICENSE.md build/dest",
     "icon": "magick convert src/icon.svg build/dest/icon.png",
-    "resources": "npm run manifest && npm run license && npm run icon",
+    "resources": "npm run manifest && npm run license",
     "typescript": "tsc",
     "browserify": "browserify build/src/background.js --outfile build/dest/background.js",
     "package": "web-ext build -s build/dest -a build/web-ext",

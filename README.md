@@ -23,7 +23,7 @@ Development
 ### Prerequisites
 
 - [yarn][] 1.22 or newer
-- [ImageMagick][imagemagick] 7.0.11-12 or newer (for icon processing)
+- [ImageMagick][imagemagick] 7.0.11-12 or newer (only if you need to prepare a new extension icon)
 
 ### Build
 
@@ -38,6 +38,14 @@ $ yarn run build
 
 ```console
 $ yarn test
+```
+
+### Icon (optional)
+
+If you have prepared a new extension icon, then run the following shell command to add it to the package:
+
+```console
+$ yarn run icon
 ```
 
 ### Install (developer mode)
