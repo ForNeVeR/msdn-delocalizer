@@ -8,6 +8,9 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - Firefox support
 
+### Fixed
+- [#9: Don't replace URL in pages that are already English](https://github.com/ForNeVeR/msdn-delocalizer/issues/9)
+
 ## [0.0.1] - 2020-04-13
 Initial release: a Chrome extension to delocalize Microsoft documentation sites.
 
