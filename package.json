@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "typescript": "tsc",
-    "manifest": "copyfiles --flat src/manifest.json build/dest",
+    "manifest": "copyfiles --flat src/manifest.json LICENSE.md build/dest",
     "browserify": "browserify build/src/background.js --outfile build/dest/background.js",
     "package": "web-ext build -s build/dest -a build/web-ext",
     "build": "npm run typescript && npm run manifest && npm run browserify && npm run package",
