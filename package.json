@@ -1,6 +1,6 @@
 {
   "name": "msdn-delocalizer",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Browser extension to force de-localization of Microsoft documentation pages",
   "main": "index.js",
   "scripts": {
