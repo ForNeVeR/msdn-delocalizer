@@ -5,11 +5,35 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="128"
    height="128"
    viewBox="0 0 33.866667 33.866667"
    version="1.1"
-   id="svg8">
+   id="svg8"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2534"
+     inkscape:window-height="1225"
+     id="namedview17"
+     showgrid="false"
+     inkscape:zoom="7.2265625"
+     inkscape:cx="64"
+     inkscape:cy="64"
+     inkscape:window-x="4233"
+     inkscape:window-y="727"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
   <defs
      id="defs2" />
   <metadata
@@ -20,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -33,15 +57,18 @@
        height="33.866669"
        x="-8.5058593e-07"
        y="-8.5058593e-07" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:21.1666px;line-height:1.25;font-family:sans-serif;fill:#916f6f;fill-opacity:1;stroke:none;stroke-width:0.529166"
-       x="2.303782"
-       y="24.62793"
-       id="text12"><tspan
-         id="tspan10"
-         x="2.303782"
-         y="24.62793"
-         style="fill:#916f6f;stroke-width:0.529166">EN</tspan></text>
+    <g
+       aria-label="EN"
+       id="text12"
+       style="font-style:normal;font-weight:normal;font-size:21.1666px;line-height:1.25;font-family:sans-serif;fill:#916f6f;fill-opacity:1;stroke:none;stroke-width:0.529166">
+      <path
+         d="M 14.509716,24.62793 H 4.3708327 V 9.2387371 H 14.509716 V 11.057742 H 6.4172129 v 4.216783 H 14.509716 V 17.09353 H 6.4172129 v 5.715395 h 8.0925031 z"
+         style="fill:#916f6f;stroke-width:0.529166"
+         id="path19" />
+      <path
+         d="M 29.495834,24.62793 H 26.963697 L 19.667008,10.861372 V 24.62793 H 17.754986 V 9.2387371 h 3.172923 L 27.583812,21.806405 V 9.2387371 h 1.912022 z"
+         style="fill:#916f6f;stroke-width:0.529166"
+         id="path21" />
+    </g>
   </g>
 </svg>
