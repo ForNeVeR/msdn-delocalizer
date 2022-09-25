@@ -5,7 +5,8 @@ import UrlUtils = require('../src/url-utils');
 
 describe('UrlUtils', () => {
 	describe('isMicrosoftDocumentationUrl', () => {
-		it('should return true for docs.microsoft.com and msdn.microsoft.com', () => {
+		it('should return true for msdn.microsoft.com, docs.microsoft.com and learn.microsoft.com', () => {
+			assert.equal(UrlUtils.isMicrosoftDocumentationUrl(new URL('https://learn.microsoft.com/abcd')), true);
 			assert.equal(UrlUtils.isMicrosoftDocumentationUrl(new URL('https://docs.microsoft.com/abcd')), true);
 			assert.equal(UrlUtils.isMicrosoftDocumentationUrl(new URL('https://msdn.microsoft.com/abcd')), true);
 		});

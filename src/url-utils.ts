@@ -1,4 +1,4 @@
-var microsoftDocumentationSites = ['docs.microsoft.com', 'msdn.microsoft.com'];
+var microsoftDocumentationSites = ['docs.microsoft.com', 'msdn.microsoft.com', 'learn.microsoft.com'];
 export function isMicrosoftDocumentationUrl(url: URL): boolean {
 	return microsoftDocumentationSites.includes(url.host);
 }

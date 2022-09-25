@@ -6,6 +6,7 @@
   "permissions": [
     "https://docs.microsoft.com/*",
     "https://msdn.microsoft.com/*",
+    "https://learn.microsoft.com/*",
     "tabs"
   ],
   "background": {
