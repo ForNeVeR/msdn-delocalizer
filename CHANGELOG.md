@@ -4,9 +4,9 @@ Changelog
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.0] - 2022-09-25
+## [1.1.0] - 2022-09-26
 ### Added
-- Support for new address learn.microsoft.com
+- Support for a new address: learn.microsoft.com
 
 ## [1.0.0] - 2021-08-22
 ### Added
@@ -25,4 +25,5 @@ Initial release: a Chrome extension to delocalize Microsoft documentation sites.
 [0.0.1]: https://github.com/ForNeVeR/msdn-delocalizer/releases/tag/v0.0.1
 [0.0.2]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v0.0.1...v0.0.2
 [1.0.0]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v0.0.2...v1.0.0
-[Unreleased]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.0.0...HEAD
+[1.1.0]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.0.0...v1.1.0
+[Unreleased]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.1.0...HEAD
