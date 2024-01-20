@@ -2,25 +2,28 @@ name: Build and Test
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
+  repository_dispatch:
+    types: [ periodic ]
 
 jobs:
   build:
     strategy:
       matrix:
-        image: [macos-12, ubuntu-22.04, windows-2022]
+        image: [ macos-12, ubuntu-22.04, windows-2022 ]
+      fail-fast: false
     runs-on: ${{ matrix.image }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - id: yarn-cache
         name: Determine Yarn cache directory
         run: |
           echo "::set-output name=path::$(yarn cache dir)"
       - name: Yarn cache
-        uses: actions/cache@v1.1.0
+        uses: actions/cache@v4
         with:
           path: ${{ steps.yarn-cache.outputs.path }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -34,8 +37,8 @@ jobs:
         run: |
           yarn test
       - name: Upload the distribution
-        if: matrix.image == 'ubuntu-18.04'
-        uses: actions/upload-artifact@v1.0.0
+        if: matrix.image == 'ubuntu-22.04'
+        uses: actions/upload-artifact@v4
         with:
           name: msdn-delocalizer
           path: build/dest
