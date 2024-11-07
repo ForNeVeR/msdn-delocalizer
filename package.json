@@ -2,7 +2,7 @@
   "name": "msdn-delocalizer",
   "version": "1.1.0",
   "description": "Browser extension to force de-localization of Microsoft documentation pages",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "manifest": "copyfiles --flat src/manifest.json LICENSE.md build/dest",
     "license": "copyfiles --flat LICENSE.md build/dest",
@@ -12,7 +12,9 @@
     "browserify": "browserify build/src/background.js --outfile build/dest/background.js",
     "package": "web-ext build -s build/dest -a build/web-ext",
     "build": "npm run resources && npm run typescript && npm run browserify && npm run package",
-    "test": "mocha build/test"
+    "test": "mocha build/test",
+    "vite-build": "vite build",
+    "vite-dev": "vite dev"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,8 @@
     "copyfiles": "^2.2.0",
     "mocha": "^2.2.4",
     "typescript": "^3.8.3",
+    "vite": "^5.4.10",
+    "vite-plugin-web-extension": "^4.2.0",
     "web-ext": "^6.3.0"
   }
 }
