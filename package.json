@@ -14,7 +14,10 @@
     "build": "npm run resources && npm run typescript && npm run browserify && npm run package",
     "test": "mocha build/test",
     "vite-build": "vite build",
-    "vite-dev": "vite dev"
+    "vite-build:firefox": "cross-env TARGET=firefox vite build",
+    "vite-dev": "vite dev",
+    "vite-dev:firefox": "cross-env TARGET=firefox vite dev",
+    "vite-publish": "cross-env PUBLISH=1 yarn vite-build && cross-env PUBLISH=1 yarn vite-build:firefox"
   },
   "repository": {
     "type": "git",
@@ -37,10 +40,12 @@
     "@types/mocha": "^7.0.2",
     "browserify": "^10.2.6",
     "copyfiles": "^2.2.0",
+    "cross-env": "^7.0.3",
     "mocha": "^2.2.4",
     "typescript": "^3.8.3",
     "vite": "^5.4.10",
     "vite-plugin-web-extension": "^4.2.0",
-    "web-ext": "^6.3.0"
+    "web-ext": "^6.3.0",
+    "zip-a-folder": "^3.1.8"
   }
 }
