@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "icon": "magick convert src/icon.svg src/assets/icon.png",
-    "test": "vitest",
+    "test": "vitest run",
     "build": "vite build",
     "build:firefox": "cross-env TARGET=firefox vite build",
     "dev": "vite dev",
