@@ -19,6 +19,9 @@ export default defineConfig({
         outDir: resolvePath("build", "dist"),
         emptyOutDir: true,
     },
+    test: {
+        dir: resolvePath("test"), 
+    },
     publicDir: "assets",
     plugins: [
         webExtension({
