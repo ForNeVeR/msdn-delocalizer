@@ -20,7 +20,7 @@ export default defineConfig({
         emptyOutDir: true,
     },
     test: {
-        dir: resolvePath("test"), 
+        dir: resolvePath("test"),
     },
     publicDir: "assets",
     plugins: [

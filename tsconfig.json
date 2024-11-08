@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "lib": ["dom", "esnext"],
-    "outDir": "build",
-    "strict": true
-  }
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "lib": ["dom", "esnext"],
+        "outDir": "build",
+        "strict": true
+    }
 }

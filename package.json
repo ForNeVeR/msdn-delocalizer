@@ -1,40 +1,40 @@
 {
-  "name": "msdn-delocalizer",
-  "version": "1.1.0",
-  "description": "Browser extension to force de-localization of Microsoft documentation pages",
-  "type": "module",
-  "scripts": {
-    "icon": "magick convert src/icon.svg src/assets/icon.png",
-    "test": "vitest run",
-    "build": "vite build",
-    "build:firefox": "cross-env TARGET=firefox vite build",
-    "dev": "vite dev",
-    "dev:firefox": "cross-env TARGET=firefox vite dev",
-    "publish": "cross-env PUBLISH=1 yarn build && cross-env PUBLISH=1 yarn build:firefox"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ForNeVeR/msdn-delocalizer"
-  },
-  "keywords": [
-    "msdn",
-    "microsoft",
-    "docs"
-  ],
-  "author": "Friedrich von Never",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ForNeVeR/msdn-delocalizer/issues"
-  },
-  "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
-  "devDependencies": {
-    "@types/chrome": "0.0.280",
-    "cross-env": "^7.0.3",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10",
-    "vite-plugin-web-extension": "^4.2.0",
-    "vitest": "^2.1.4",
-    "web-ext": "^8.3.0",
-    "zip-a-folder": "^3.1.8"
-  }
+    "name": "msdn-delocalizer",
+    "version": "1.1.0",
+    "description": "Browser extension to force de-localization of Microsoft documentation pages",
+    "type": "module",
+    "scripts": {
+        "icon": "magick convert src/icon.svg src/assets/icon.png",
+        "test": "vitest run",
+        "build": "vite build",
+        "build:firefox": "cross-env TARGET=firefox vite build",
+        "dev": "vite dev",
+        "dev:firefox": "cross-env TARGET=firefox vite dev",
+        "publish": "cross-env PUBLISH=1 yarn build && cross-env PUBLISH=1 yarn build:firefox"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ForNeVeR/msdn-delocalizer"
+    },
+    "keywords": [
+        "msdn",
+        "microsoft",
+        "docs"
+    ],
+    "author": "Friedrich von Never",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ForNeVeR/msdn-delocalizer/issues"
+    },
+    "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
+    "devDependencies": {
+        "@types/chrome": "0.0.280",
+        "cross-env": "^7.0.3",
+        "typescript": "^5.6.3",
+        "vite": "^5.4.10",
+        "vite-plugin-web-extension": "^4.2.0",
+        "vitest": "^2.1.4",
+        "web-ext": "^8.3.0",
+        "zip-a-folder": "^3.1.8"
+    }
 }
