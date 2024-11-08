@@ -4,20 +4,13 @@
   "description": "Browser extension to force de-localization of Microsoft documentation pages",
   "type": "module",
   "scripts": {
-    "manifest": "copyfiles --flat src/manifest.json LICENSE.md build/dest",
-    "license": "copyfiles --flat LICENSE.md build/dest",
     "icon": "magick convert src/icon.svg build/dest/icon.png",
-    "resources": "npm run manifest && npm run license",
-    "typescript": "tsc",
-    "browserify": "browserify build/src/background.js --outfile build/dest/background.js",
-    "package": "web-ext build -s build/dest -a build/web-ext",
-    "build": "npm run resources && npm run typescript && npm run browserify && npm run package",
     "test": "mocha build/test",
-    "vite-build": "vite build",
-    "vite-build:firefox": "cross-env TARGET=firefox vite build",
-    "vite-dev": "vite dev",
-    "vite-dev:firefox": "cross-env TARGET=firefox vite dev",
-    "vite-publish": "cross-env PUBLISH=1 yarn vite-build && cross-env PUBLISH=1 yarn vite-build:firefox"
+    "build": "vite build",
+    "build:firefox": "cross-env TARGET=firefox vite build",
+    "dev": "vite dev",
+    "dev:firefox": "cross-env TARGET=firefox vite dev",
+    "publish": "cross-env PUBLISH=1 yarn build && cross-env PUBLISH=1 yarn build:firefox"
   },
   "repository": {
     "type": "git",
@@ -36,16 +29,14 @@
   "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
   "devDependencies": {
     "@types/assert": "^1.5.5",
-    "@types/chrome": "0.0.91",
-    "@types/mocha": "^7.0.2",
-    "browserify": "^10.2.6",
-    "copyfiles": "^2.2.0",
+    "@types/chrome": "0.0.280",
+    "@types/mocha": "^10.0.9",
     "cross-env": "^7.0.3",
-    "mocha": "^2.2.4",
-    "typescript": "^3.8.3",
+    "mocha": "^10.8.2",
+    "typescript": "^5.6.3",
     "vite": "^5.4.10",
     "vite-plugin-web-extension": "^4.2.0",
-    "web-ext": "^6.3.0",
+    "web-ext": "^8.3.0",
     "zip-a-folder": "^3.1.8"
   }
 }
