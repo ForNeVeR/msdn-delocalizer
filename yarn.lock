@@ -3724,10 +3724,10 @@ vite-node@2.1.4:
     pathe "^1.1.2"
     vite "^5.0.0"
 
-vite-plugin-web-extension@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-web-extension/-/vite-plugin-web-extension-4.2.0.tgz#8055b59ca567facc0c42cbeab1901607bcc9cf1b"
-  integrity sha512-egPgtvnfnKTJBEbZomfgAw8H5OwhCPMDLEzYBiFvV+zWOu8gwkeHqYZM2XiLLYNp9nGEw6rCPonw2MneNl5mHQ==
+vite-plugin-web-extension@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-web-extension/-/vite-plugin-web-extension-4.3.1.tgz#57bc0d6d8990c0f365d2fcdfed8bb681bd6cf25b"
+  integrity sha512-yG/07Rzk70SxLUQIfZMbNm0472gbFPkoPCAJvcGhyblTrg0FPSKfkQJ4yug0//IxoYCaTv5WIcNJCuVntUz4rQ==
   dependencies:
     ajv "^8.11.0"
     async-lock "^1.3.2"

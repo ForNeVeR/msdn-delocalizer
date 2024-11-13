@@ -1,7 +1,7 @@
-import { build, defineConfig, Plugin, PluginOption } from "vite";
+import { defineConfig } from "vite";
 import * as path from "path";
 import { normalizePath } from "vite";
-import { webExtension } from "./src/plugins/web-extension-plugin";
+import webExtension from "vite-plugin-web-extension";
 import * as fs from "fs";
 import { zip } from "zip-a-folder";
 
@@ -13,10 +13,12 @@ const isPublish = process.env.PUBLISH === "1";
 const resolvePath = (...args: string[]) => normalizePath(path.resolve(...args));
 const joinPath = (...args: string[]) => normalizePath(path.join(...args));
 
+const distFolder = resolvePath("build", "dist");
+
 export default defineConfig({
     root: "src",
     build: {
-        outDir: resolvePath("build", "dist"),
+        outDir: distFolder,
         emptyOutDir: true,
     },
     test: {
@@ -27,7 +29,7 @@ export default defineConfig({
         webExtension({
             browser: targetBrowser,
             disableAutoLaunch: true,
-            onParentBuildEnd: async () => {
+            onBundleReady: async () => {
                 const distFolder = resolvePath("build", "dist");
                 const webExtFolder = resolvePath("build", "web-ext");
 
