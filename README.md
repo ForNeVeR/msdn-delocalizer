@@ -27,12 +27,34 @@ Development
 
 ### Build
 
-To compile the plugin into the `build/dest` directory, and pack the ZIP file to `build/web-ext` directory, use the following shell commands:
+Install the dependencies:
 
 ```console
 $ yarn install
-$ yarn run build
 ```
+
+The project supports several build options. Use the following commands based on your needs:
+
+- **Development with hot reload**:  
+Launches a development server with hot reload. The extension files are placed in the `build/dest` directory.  
+    ```console
+    $ yarn run dev # for Chromium-based browsers (manifest v3)
+    $ yarn run dev:firefox # for Firefox-based browsers (manifest v2)
+    ```
+
+- **Build for production**:  
+Creates a ZIP file of the extension in the `build/web-ext` directory.  
+  ```console
+  $ yarn run build # for Chromium-based browsers (manifest v3)
+  $ yarn run build:firefox # for Firefox-based browsers (manifest v2)
+  ```
+
+- **Publish for multiple browsers**:  
+Builds the extension for both Chrome and Firefox, generating two ZIP files in the `build/web-ext` directory.  
+  ```console
+  $ yarn run publish
+  ```
+
 
 ### Test
 
