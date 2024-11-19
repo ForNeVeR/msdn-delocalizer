@@ -1,19 +1,19 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "msdn-delocalizer",
   "description": "Browser extension to force de-localization of Microsoft documentation pages",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "permissions": [
-    "https://docs.microsoft.com/*",
-    "https://msdn.microsoft.com/*",
-    "https://learn.microsoft.com/*",
     "tabs"
   ],
+  "host_permissions": [
+    "https://docs.microsoft.com/*",
+    "https://msdn.microsoft.com/*",
+    "https://learn.microsoft.com/*"
+  ],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   },
   "icons": {
     "128": "icon.png"
