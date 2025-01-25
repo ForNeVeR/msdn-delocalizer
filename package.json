@@ -6,11 +6,14 @@
     "scripts": {
         "icon": "magick convert src/icon.svg src/assets/icon.png",
         "test": "vitest run",
-        "build": "vite build",
-        "build:firefox": "cross-env TARGET=firefox vite build",
-        "dev": "vite dev",
-        "dev:firefox": "cross-env TARGET=firefox vite dev",
-        "publish": "cross-env PUBLISH=1 yarn build && cross-env PUBLISH=1 yarn build:firefox"
+        "build": "wxt build",
+        "build:firefox": "wxt build -b firefox",
+        "dev": "wxt",
+        "dev:firefox": "wxt -b firefox",
+        "zip": "wxt zip",
+        "zip:firefox": "wxt zip -b firefox",
+        "zip:all": "wxt zip && wxt zip -b firefox",
+        "postinstall": "wxt prepare"
     },
     "repository": {
         "type": "git",
@@ -28,13 +31,10 @@
     },
     "homepage": "https://github.com/ForNeVeR/msdn-delocalizer",
     "devDependencies": {
-        "@types/chrome": "0.0.280",
-        "cross-env": "^7.0.3",
-        "typescript": "^5.6.3",
-        "vite": "^5.4.10",
-        "vite-plugin-web-extension": "^4.3.1",
-        "vitest": "^2.1.4",
-        "web-ext": "^8.3.0",
-        "zip-a-folder": "^3.1.8"
+        "@wxt-dev/auto-icons": "^1.0.2",
+        "rollup-plugin-copy": "^3.5.0",
+        "typescript": "^5.7.3",
+        "vitest": "^3.0.4",
+        "wxt": "^0.19.25"
     }
 }

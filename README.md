@@ -36,25 +36,26 @@ $ yarn install
 The project supports several build options. Use the following commands based on your needs:
 
 - **Development with hot reload**:  
-Launches a development server with hot reload. The extension files are placed in the `build/dest` directory.  
+Launches a development server with hot reload. The extension files are placed in the `build/{browser-name}-mv{mv-ver}` directory.  
     ```console
     $ yarn run dev # for Chromium-based browsers (manifest v3)
     $ yarn run dev:firefox # for Firefox-based browsers (manifest v2)
     ```
 
 - **Build for production**:  
-Creates a ZIP file of the extension in the `build/web-ext` directory.  
+Creates a production build of the extension in the `build/{browser-name}-mv{mv-ver}` directory.  
   ```console
   $ yarn run build # for Chromium-based browsers (manifest v3)
   $ yarn run build:firefox # for Firefox-based browsers (manifest v2)
   ```
 
-- **Publish for multiple browsers**:  
-Builds the extension for both Chrome and Firefox, generating two ZIP files in the `build/web-ext` directory.  
+- **Create ZIP files for extension stores**:  
+Builds the extension for both Chrome and Firefox, generating two ZIP files in the `build` directory. Firefox-specific command also creates a zip with sources as its store requires them.
   ```console
-  $ yarn run publish
+  $ yarn run zip # for Chromium-based browsers (manifest v3)
+  $ yarn run zip:firefox # for Firefox-based browsers (manifest v2)
+  $ yarn run zip:all # for all browsers
   ```
-
 
 ### Test
 
@@ -72,11 +73,11 @@ $ yarn run icon
 
 ### Install (developer mode)
 
-- **Chrome**: to install msdn-delocalizer to your Chrome in the [developer mode][chrome-dev-mode], load the `build/dest` directory as the unpacked extension source, and refresh it after every rebuild.
+- **Chrome**: to install msdn-delocalizer to your Chrome in the [developer mode][chrome-dev-mode], load the `build/chrome-mv3` directory as the unpacked extension source, and refresh it after every rebuild.
 - **Firefox**:
   - enter the **Add-ons and Themes** page
   - click the **Debug Add-ons** action from the page gear menu
-  - **Load Temporary Add-on**, navigate to the `build/web-ext/msdn-delocalizer-<VERSION>.zip` file
+  - **Load Temporary Add-on**, navigate to the `build/firefox-mv2` and select `manifest.json`
 
 Documentation
 -------------

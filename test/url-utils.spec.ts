@@ -1,5 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { delocalizeUrl, isMicrosoftDocumentationUrl } from "../src/url-utils";
+import {
+    delocalizeUrl,
+    isMicrosoftDocumentationUrl,
+} from "../src/utils/url-utils";
 
 describe("UrlUtils", () => {
     describe("isMicrosoftDocumentationUrl", () => {

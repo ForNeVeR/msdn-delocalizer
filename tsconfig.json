@@ -1,9 +1,3 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "commonjs",
-        "lib": ["dom", "esnext"],
-        "outDir": "build",
-        "strict": true
-    }
+    "extends": "./.wxt/tsconfig.json"
 }
