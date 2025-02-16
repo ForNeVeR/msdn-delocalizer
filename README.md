@@ -105,5 +105,5 @@ Documentation
 [license]: ./LICENSE.md
 [maintainership]: ./MAINTAINERSHIP.md
 [screenshot]: docs/screenshot.png
-[yarn]: https://classic.yarnpkg.com/
 [volta]: https://volta.sh/
+[yarn]: https://classic.yarnpkg.com/
