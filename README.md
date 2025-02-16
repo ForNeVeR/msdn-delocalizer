@@ -25,6 +25,13 @@ Development
 - [yarn][] 1.22 or newer
 - [ImageMagick][imagemagick] 7.0.11-12 or newer (only if you need to prepare a new extension icon)
 
+To set the Node-related prerequisites up, you may use [Volta][volta]:
+
+```console
+$ volta install node@22
+$ volta install yarn@1
+```
+
 ### Build
 
 Install the dependencies:
@@ -35,21 +42,21 @@ $ yarn install
 
 The project supports several build options. Use the following commands based on your needs:
 
-- **Development with hot reload**:  
-Launches a development server with hot reload. The extension files are placed in the `build/{browser-name}-mv{mv-ver}` directory.  
+- **Development with hot reload**:
+Launches a development server with hot reload. The extension files are placed in the `build/{browser-name}-mv{mv-ver}` directory.
     ```console
     $ yarn run dev # for Chromium-based browsers (manifest v3)
     $ yarn run dev:firefox # for Firefox-based browsers (manifest v2)
     ```
 
-- **Build for production**:  
-Creates a production build of the extension in the `build/{browser-name}-mv{mv-ver}` directory.  
+- **Build for production**:
+Creates a production build of the extension in the `build/{browser-name}-mv{mv-ver}` directory.
   ```console
   $ yarn run build # for Chromium-based browsers (manifest v3)
   $ yarn run build:firefox # for Firefox-based browsers (manifest v2)
   ```
 
-- **Create ZIP files for extension stores**:  
+- **Create ZIP files for extension stores**:
 Builds the extension for both Chrome and Firefox, generating two ZIP files in the `build` directory. Firefox-specific command also creates a zip with sources as its store requires them.
   ```console
   $ yarn run zip # for Chromium-based browsers (manifest v3)
@@ -75,7 +82,8 @@ $ yarn run icon
 
 - **Chrome**: to install msdn-delocalizer to your Chrome in the [developer mode][chrome-dev-mode], load the `build/chrome-mv3` directory as the unpacked extension source, and refresh it after every rebuild.
 - **Firefox**:
-  - enter the **Add-ons and Themes** page
+  - open **Settings** via the main menu,
+  - enter the **Extensions and Themes** page
   - click the **Debug Add-ons** action from the page gear menu
   - **Load Temporary Add-on**, navigate to the `build/firefox-mv2` and select `manifest.json`
 
@@ -89,7 +97,7 @@ Documentation
 [badge-chrome-web-store]: https://img.shields.io/chrome-web-store/v/oakieneemalliefelmegebjjagnjgpbm
 [badge-firefox-add-ons]: https://img.shields.io/amo/v/msdn-delocalizer
 [changelog]: ./CHANGELOG.md
-[chrome-dev-mode]: https://developer.chrome.com/extensions/getstarted#unpacked
+[chrome-dev-mode]: https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked
 [chrome-web-store]: https://chrome.google.com/webstore/detail/msdn-delocalizer/oakieneemalliefelmegebjjagnjgpbm
 [firefox-add-ons]: https://addons.mozilla.org/en-US/firefox/addon/msdn-delocalizer/
 [icon]: ./src/icon.svg
@@ -98,3 +106,4 @@ Documentation
 [maintainership]: ./MAINTAINERSHIP.md
 [screenshot]: docs/screenshot.png
 [yarn]: https://classic.yarnpkg.com/
+[volta]: https://volta.sh/
