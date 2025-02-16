@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: [ macos-12, ubuntu-22.04, windows-2022 ]
+        image: [ macos-14, ubuntu-22.04, windows-2022 ]
       fail-fast: false
     runs-on: ${{ matrix.image }}
     steps:
