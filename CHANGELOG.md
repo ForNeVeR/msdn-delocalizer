@@ -6,8 +6,8 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.2.0] - 2025-02-16
 ### Changed
-- Migrate to v3 manifest for Chrome ([#34](https://github.com/ForNeVeR/msdn-delocalizer/issues/34)).
-- Modernize the build system.
+- Migrate to v3 manifest for Chrome ([#34](https://github.com/ForNeVeR/msdn-delocalizer/issues/34)). Thanks to @alvkn and @KeterSCP!
+- Modernize the build system. Thanks to @alvkn!
 
 ## [1.1.0] - 2022-09-26
 ### Added
