@@ -22,6 +22,7 @@ Development
 -----------
 ### Prerequisites
 
+- [node.js][] v22 or newer
 - [yarn][] 1.22 or newer
 - [ImageMagick][imagemagick] 7.0.11-12 or newer (only if you need to prepare a new extension icon)
 
@@ -104,6 +105,7 @@ Documentation
 [imagemagick]: https://imagemagick.org/
 [license]: ./LICENSE.md
 [maintainership]: ./MAINTAINERSHIP.md
+[node.js]: https://nodejs.org/en
 [screenshot]: docs/screenshot.png
 [volta]: https://volta.sh/
 [yarn]: https://classic.yarnpkg.com/
