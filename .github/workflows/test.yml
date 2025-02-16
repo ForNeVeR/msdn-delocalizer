@@ -42,7 +42,7 @@ jobs:
           name: msdn-delocalizer.chrome
           path: build/chrome-mv3
       - name: Upload the Firefox distribution
-        if: matrix.image == 'ubuntu-22.04'
+        if: matrix.image == 'ubuntu-24.04'
         uses: actions/upload-artifact@v4
         with:
           name: msdn-delocalizer.firefox
