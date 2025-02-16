@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: [ macos-14, ubuntu-22.04, windows-2022 ]
+        image: [ macos-14, ubuntu-24.04, windows-2022 ]
       fail-fast: false
     runs-on: ${{ matrix.image }}
     steps:
@@ -38,7 +38,7 @@ jobs:
         run: |
           yarn test
       - name: Upload the distribution
-        if: matrix.image == 'ubuntu-22.04'
+        if: matrix.image == 'ubuntu-24.04'
         uses: actions/upload-artifact@v4
         with:
           name: msdn-delocalizer
