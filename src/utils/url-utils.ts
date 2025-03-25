@@ -2,6 +2,8 @@ const microsoftDocumentationSites = [
     "docs.microsoft.com",
     "msdn.microsoft.com",
     "learn.microsoft.com",
+    "azure.microsoft.com",
+    "support.microsoft.com",
 ];
 
 export function isMicrosoftDocumentationUrl(url: URL): boolean {

@@ -16,6 +16,8 @@ export default defineConfig({
             "https://docs.microsoft.com/*",
             "https://msdn.microsoft.com/*",
             "https://learn.microsoft.com/*",
+            "https://azure.microsoft.com/*",
+            "https://support.microsoft.com/*",
         ],
         background: {
             service_worker: "background.ts",
