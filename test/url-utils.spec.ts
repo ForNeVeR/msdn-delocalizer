@@ -6,7 +6,7 @@ import {
 
 describe("UrlUtils", () => {
     describe("isMicrosoftDocumentationUrl", () => {
-        it("should return true for msdn.microsoft.com, docs.microsoft.com, and learn.microsoft.com", () => {
+        it("should return true for msdn.microsoft.com, docs.microsoft.com, learn.microsoft.com, azure.microsoft.com, and support.microsoft.com", () => {
             expect(
                 isMicrosoftDocumentationUrl(
                     new URL("https://learn.microsoft.com/abcd")
@@ -20,6 +20,16 @@ describe("UrlUtils", () => {
             expect(
                 isMicrosoftDocumentationUrl(
                     new URL("https://msdn.microsoft.com/abcd")
+                )
+            ).toBe(true);
+            expect(
+                isMicrosoftDocumentationUrl(
+                    new URL("https://azure.microsoft.com/abcd")
+                )
+            ).toBe(true);
+            expect(
+                isMicrosoftDocumentationUrl(
+                    new URL("https://support.microsoft.com/abcd")
                 )
             ).toBe(true);
         });
