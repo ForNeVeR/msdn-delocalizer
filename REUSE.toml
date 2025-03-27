@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "msdn-delocalizer"
+SPDX-PackageSupplier = "msdn-delocalizer contributors <https://github.com/ForNeVeR/msdn-delocalizer>"
+SPDX-PackageDownloadLocation = "https://github.com/ForNeVeR/msdn-delocalizer"
+
+[[annotations]]
+path = ".idea/**/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Friedrich von Never <friedrich@fornever.me>"
+SPDX-License-Identifier = "MIT"

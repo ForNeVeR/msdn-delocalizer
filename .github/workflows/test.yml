@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Friedrich von Never <friedrich@fornever.me>
+#
+# SPDX-License-Identifier: MIT
+
 name: Build and Test
 on:
   push:
@@ -47,3 +51,11 @@ jobs:
         with:
           name: msdn-delocalizer.firefox
           path: build/firefox-mv2
+
+  licenses:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out the sources
+        uses: actions/checkout@v4
+      - name: REUSE license check
+        uses: fsfe/reuse-action@v5

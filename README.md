@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024-2025 Friedrich von Never <friedrich@fornever.me>
+
+SPDX-License-Identifier: MIT
+-->
+
 msdn-delocalizer [![Chrome Web Store][badge-chrome-web-store]][chrome-web-store] [![Firefox Add-ons][badge-firefox-add-ons]][firefox-add-ons]
 ================
 ![Extension icon][icon]
@@ -92,20 +98,28 @@ Documentation
 -------------
 
 - [Changelog][changelog]
+- [Contributor Guide][docs.contributing]
 - [Maintainership][maintainership]
-- [License (MIT)][license]
+
+License
+-------
+The project is distributed under the terms of [the MIT license][docs.license].
+
+The license indication in the project's sources is compliant with the [REUSE specification v3.3][reuse.spec].
 
 [badge-chrome-web-store]: https://img.shields.io/chrome-web-store/v/oakieneemalliefelmegebjjagnjgpbm
 [badge-firefox-add-ons]: https://img.shields.io/amo/v/msdn-delocalizer
 [changelog]: ./CHANGELOG.md
 [chrome-dev-mode]: https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked
 [chrome-web-store]: https://chrome.google.com/webstore/detail/msdn-delocalizer/oakieneemalliefelmegebjjagnjgpbm
+[docs.contributing]: CONTRIBUTING.md
+[docs.license]: ./LICENSE.txt
 [firefox-add-ons]: https://addons.mozilla.org/en-US/firefox/addon/msdn-delocalizer/
 [icon]: ./src/icon.svg
 [imagemagick]: https://imagemagick.org/
-[license]: ./LICENSE.md
 [maintainership]: ./MAINTAINERSHIP.md
 [node.js]: https://nodejs.org/en
+[reuse.spec]: https://reuse.software/spec-3.3/
 [screenshot]: docs/screenshot.png
 [volta]: https://volta.sh/
 [yarn]: https://classic.yarnpkg.com/

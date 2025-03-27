@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 msdn-delocalizer contributors <https://github.com/ForNeVeR/msdn-delocalizer>
+
+SPDX-License-Identifier: MIT
+-->
+
 Maintainership Instructions
 ===========================
 
@@ -19,5 +25,5 @@ Releasing a New Version
 [add-ons-for-firefox]: https://addons.mozilla.org/en-US/developers/addon/msdn-delocalizer/edit
 [changelog]: ./CHANGELOG.md
 [chrome-web-store-developer]: https://chrome.google.com/webstore/developer/dashboard
-[license]: ./LICENSE.md
+[license]: ./LICENSE.txt
 [semver]: https://semver.org/spec/v2.0.0.html

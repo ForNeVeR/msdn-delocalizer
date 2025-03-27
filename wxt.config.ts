@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 msdn-delocalizer contributors <https://github.com/ForNeVeR/msdn-delocalizer>
+//
+// SPDX-License-Identifier: MIT
+
 import { defineConfig } from "wxt";
 import copy from 'rollup-plugin-copy';
 
@@ -29,7 +33,7 @@ export default defineConfig({
     vite: () => ({
         plugins: [
             copy({
-                targets: [{src: "LICENSE.md", dest: "src/public" }],
+                targets: [{src: "LICENSE.txt", dest: "src/public" }],
                 hook: "buildStart",
             }),
         ],
