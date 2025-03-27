@@ -10,6 +10,14 @@ Changelog
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-03-27
+### Added
+- Support for the new domains:
+  - https://azure.microsoft.com/
+  - https://support.microsoft.com/
+
+  Thanks to @trejjam!
+
 ## [1.2.0] - 2025-02-16
 ### Changed
 - Migrate to v3 manifest for Chrome ([#34](https://github.com/ForNeVeR/msdn-delocalizer/issues/34)). Thanks to @alvkn and @KeterSCP!
@@ -38,4 +46,5 @@ Initial release: a Chrome extension to delocalize Microsoft documentation sites.
 [1.0.0]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v0.0.2...v1.0.0
 [1.1.0]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.0.0...v1.1.0
 [1.2.0]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.1.0...v1.2.0
-[Unreleased]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.2.0...HEAD
+[1.3.0]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.2.0...v1.3.0
+[Unreleased]: https://github.com/ForNeVeR/msdn-delocalizer/compare/v1.3.0...HEAD

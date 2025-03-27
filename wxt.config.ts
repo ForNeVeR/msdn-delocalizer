@@ -12,7 +12,7 @@ export default defineConfig({
     imports: false,
     manifest: {
         name: "msdn-delocalizer",
-        version: "1.2.0",
+        version: "1.3.0",
         description:
             "Browser extension to force de-localization of Microsoft documentation pages",
         permissions: ["tabs"],
