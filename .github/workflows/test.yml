@@ -41,13 +41,13 @@ jobs:
           yarn test
       - name: Upload the Chrome distribution
         if: matrix.image == 'ubuntu-24.04'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: msdn-delocalizer.chrome
           path: build/chrome-mv3
       - name: Upload the Firefox distribution
         if: matrix.image == 'ubuntu-24.04'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: msdn-delocalizer.firefox
           path: build/firefox-mv2
