@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
     runs-on: ${{ matrix.image }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set up Node and Yarn cache
         uses: actions/setup-node@v4
         with:
@@ -56,6 +56,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Check out the sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: REUSE license check
         uses: fsfe/reuse-action@v5
