@@ -33,7 +33,7 @@
     "devDependencies": {
         "@wxt-dev/auto-icons": "^1.0.2",
         "rollup-plugin-copy": "^3.5.0",
-        "typescript": "^5.7.3",
+        "typescript": "^6.0.0",
         "vitest": "^4.0.0",
         "wxt": "^0.19.25"
     }
