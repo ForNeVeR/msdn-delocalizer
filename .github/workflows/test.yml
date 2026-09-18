@@ -18,7 +18,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: [ macos-26, ubuntu-24.04, windows-2025 ]
+        image: [ macos-26, ubuntu-26.04, windows-2025 ]
       fail-fast: false
     runs-on: ${{ matrix.image }}
     steps:
@@ -41,20 +41,20 @@ jobs:
         run: |
           yarn test
       - name: Upload the Chrome distribution
-        if: matrix.image == 'ubuntu-24.04'
+        if: matrix.image == 'ubuntu-26.04'
         uses: actions/upload-artifact@v7
         with:
           name: msdn-delocalizer.chrome
           path: build/chrome-mv3
       - name: Upload the Firefox distribution
-        if: matrix.image == 'ubuntu-24.04'
+        if: matrix.image == 'ubuntu-26.04'
         uses: actions/upload-artifact@v7
         with:
           name: msdn-delocalizer.firefox
           path: build/firefox-mv2
 
   licenses:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Check out the sources
         uses: actions/checkout@v7
