@@ -1051,10 +1051,10 @@
   resolved "https://registry.yarnpkg.com/@webext-core/match-patterns/-/match-patterns-1.0.3.tgz#d590e5063e21a6a83d245700dfeb5489fbd99a77"
   integrity sha512-NY39ACqCxdKBmHgw361M9pfJma8e4AZo20w9AY+5ZjIj1W2dvXC8J31G5fjfOGbulW9w4WKpT8fPooi0mLkn9A==
 
-"@wxt-dev/auto-icons@^1.0.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@wxt-dev/auto-icons/-/auto-icons-1.1.2.tgz#4101eaaaa705081b5e8ed2b44c6e3d4f0171dba0"
-  integrity sha512-tLBTgvAAPj5n9VTrNVgbkqSvcuKTZjppgrpGq6YnZ+oOj69bqOWQdFRMhHutTcs4tvIvhgJ80LmhwQXhUyyTxA==
+"@wxt-dev/auto-icons@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@wxt-dev/auto-icons/-/auto-icons-2.0.0.tgz#c783645ad9b55d6e46d1dfcc7d27a875acc5d1ac"
+  integrity sha512-U6W62V37RKlGWb2vdOouaD7Xv2cIuCsPzdRrgOWD9yp4obt23oIz/LG+evrFecP19GtWtOT7Q6HpN9eSQKzS2A==
   dependencies:
     defu "^6.1.4"
     sharp "^0.35.3"
